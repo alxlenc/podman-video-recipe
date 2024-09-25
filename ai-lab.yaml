@@ -11,16 +11,14 @@ application:
       backend:
         - llama
       arch:
-        - arm64
         - amd64
       ports:
         - 8001
       image: quay.io/ai-lab/llamacppp_python:latest
-    - name: streamlit-chat-app
+    - name: streamlit-translator-app
       contextdir: app
       containerfile: Containerfile
       arch:
-        - arm64
         - amd64
       ports:
         - 8501
