@@ -52,7 +52,7 @@ def enableInput():
 def disableInput():
     st.session_state["input_disabled"] = True
 
-st.title("💬 Chatbot")  
+st.title("💬 Spanish translator")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", 
                                      "content": "How can I help you?"}]
@@ -84,7 +84,7 @@ llm = ChatOpenAI(base_url=model_service,
                                             collapse_completed_thoughts=True)])
 
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are world class technical advisor."),
+    ("system", "You are a Spanish translator, translate any input to Spanish."),
     MessagesPlaceholder(variable_name="history"),
     ("user", "{input}")
 ])
